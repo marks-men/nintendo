@@ -1,0 +1,1096 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+body {
+  font-family: "Open Sans","Helvetica Neue",sans-serif;
+  background-color: #f4f4f4;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #e60012;
+}
+
+/* Header */
+
+header {
+  background-color: #e60012;
+  position: fixed;
+  z-index: 6;
+  width: 101%;
+  padding: 1.9em;
+  margin: -1em;
+}
+
+header nav {
+  margin-left: 0.75em;
+}
+
+header nav img {
+  width: 8em;
+  margin: -1em;
+  padding: 0em;
+  margin-left: -1em;
+}
+
+.search {
+  transform: rotate(90deg);
+  padding: 1em 0em 0em 0em;
+  margin-top: -0.6em;
+}
+
+header nav div {
+  position: absolute;
+  display: inline;
+  right: 0.5em;
+}
+
+nav div img:nth-of-type(2) {
+  margin: 0em 0em -0.4em 0em;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav div p {
+  display: inline;
+  color: white;
+}
+
+header a:last-child {
+  margin-right: 0.5em;
+}
+
+nav div img:last-of-type {
+  padding: 0em 0em 0.5em 0em;
+  margin-left: 0.1em;
+  margin-right: 0.8em;
+}
+
+header nav div img {
+  width: 2em;
+}
+
+header hr {
+  margin: 0em 1em 0em 1em;
+  border-color: white;
+  display: inline;
+  padding: 0.5em 0em 0.5em 0em;
+}
+
+/*https://codepen.io/LantareCode/pen/dOXmBJ*/
+.mario {
+  position: absolute;
+  width: 4em;
+  height: 4.4em;
+  background: url("../images/mario.png");
+  margin-top: -1.5em;
+  /*steps wordt gebruikt om het te laten lopen, het is een afbeelding met 4 kleinere afbeeldingen erin waardoor het systeem heen tappt*/
+  animation: play 0.8s steps(4) infinite, run 4s both infinite linear;
+}
+@keyframes play{
+  100%{background-position: 17.75em;}
+}
+
+@keyframes run{
+  from{left: 10em;}
+  to{left: 69%;}
+}
+
+
+
+/* Main */
+main nav {
+  height: 100%;
+  position: fixed;
+  margin-left: -1em;
+  background: #bf0010;
+  z-index: 1;
+}
+
+main nav ul li {
+  text-decoration: none;
+  list-style: none;
+  font-size: 80%;
+  padding: 1em 0em 1em 0.5em;
+  background-color: #e60012;
+  text-align: center;
+  margin-left: -7em;
+  width: 7em;
+  margin-top: 0.1em;
+}
+
+main nav ul li:hover {
+  background-color: #d10000;
+}
+
+main nav ul li a {
+  color: white;
+  text-decoration: none;
+  width: 6em;
+  display: block;
+}
+
+main nav ul {
+  margin: 4em 0em 0em 3.6em;
+  background: #bf0010;
+  width: max-content;
+}
+main nav ul li:last-child{
+  background-color: #bf0010;;
+}
+
+main nav ul li:last-child a img{
+  background: white;
+  padding: 0.8em 0.5em 0.8em 0.5em;
+  border-radius: 0.3em 0.3em 0em 0em;
+  position: absolute;
+  bottom: 0;
+  margin-left: 2em;
+  width: 2em;
+}
+
+main nav ul li img {
+  width: 2.5em;
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5em;
+}
+
+.uitgelicht {
+  padding: 4.5em 0em 0em 5.4em;
+  width: 69%;
+  display: grid;
+  grid-column-gap: 0.2em;
+  grid-row-gap: 0.2em; 
+}
+
+.uitgelicht a:hover {
+  margin: -0.35em 0em 0.35em 0em;
+  box-shadow: 0 0 1em 0.25em #888;
+  transition: 0.5s;
+  transition-timing-function: linear;
+}
+
+.uitgelicht a {
+  position: relative;
+  transition-timing-function: linear;
+  transition: 0.5s;
+}
+
+.uitgelicht p {
+  z-index: 2;
+  position: absolute;
+  margin: -2.7em auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 0em 0em 1em 0em;
+  text-align: center;
+  line-height: 1.5em;
+  color: white;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  text-transform: uppercase;
+}
+
+.uitgelicht a img {
+  border-radius: 0.2em;
+}
+/* https://www.sitepoint.com/css-grid-generators/ 
+https://cssgrid-generator.netlify.app/ */
+.div1 { grid-area: 10 / 1 / 11 / 4; }
+.div2 { grid-area: 9 / 2 / 10 / 4; }
+.div3 { grid-area: 8 / 1 / 10 / 2; }
+.div4 { grid-area: 8 / 2 / 9 / 3; }
+.div5 { grid-area: 8 / 3 / 9 / 4; }
+.div6 { grid-area: 7 / 2 / 8 / 4; }
+.div7 { grid-area: 6 / 1 / 8 / 2; }
+.div8 { grid-area: 6 / 2 / 7 / 3; }
+.div9 { grid-area: 6 / 3 / 7 / 4; }
+.div10 { grid-area: 4 / 1 / 5 / 3; }
+.div11 { grid-area: 3 / 3 / 5 / 4; }
+.div12 { grid-area: 3 / 2 / 4 / 3; }
+.div13 { grid-area: 3 / 1 / 4 / 2; }
+.div14 { grid-area: 2 / 1 / 3 / 3; }
+.div15 { grid-area: 1 / 3 / 3 / 4; }
+.div16 { grid-area: 1 / 2 / 2 / 3; }
+.div17 { grid-area: 1 / 1 / 2 / 2; }
+.div18 { grid-area: 5 / 1 / 6 / 2; }
+.div19 { grid-area: 5 / 3 / 6 / 4; } 
+.div20 { grid-area: 5 / 2 / 6 / 2;}
+
+main section a img {
+  width: 100%;
+  height: 100%;
+}
+
+.nieuws {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30.5%;
+  margin-top: 2em;
+}
+
+.nieuws ul li {
+  text-decoration: none;
+  list-style: none;
+  background-color: white;
+  margin-bottom: 0.3em;
+}
+
+.nieuws h2 {
+  font-size: 1em;
+  color: #333;
+  font-weight: 700;
+  padding: 0.5em;
+  background-color: white;
+  margin-top: 3em;
+  margin-bottom: -0.4em;
+  border-left: #f4f4f4 solid 4px;
+}
+
+.nieuws ul {
+  padding: 0em;
+}
+
+.nieuws .artikel div {
+  margin-left: 0.5em;
+}
+
+.nieuws ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nieuws ul li a img {
+  margin: auto;
+  width: auto;
+  height: auto;  
+  max-width: 10em;
+}
+
+.data {
+  font-size: 0.6em;
+}
+
+.text {
+  font-size: 0.8em;
+}
+
+.nieuws .artikel {
+  display: flex;
+  padding: 0.5em;
+}
+
+.nieuws ul li h3 {
+  font-weight: 700;
+  font-size: 1em;
+  color: #333;
+}
+
+.nieuws ul li a:hover h3 {
+  text-decoration: underline;
+}
+
+.nieuws ul .more {
+  font-size: 1em;
+  font-weight: 700;
+  background-color: white;
+  line-height: 3em;
+  color: black;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  position: absolute;
+  text-align: end;
+  padding-right: 2em;
+}
+
+.delen {
+  position: relative;
+  background-color: #333;
+  color: white;
+  margin: 2.2em 0em 2.2em 5.4em;
+  padding: 0.8em 0em 0.8em 0em;  
+}
+
+.delen h2 {
+  display: inline;
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.share {
+  display: inline-flex;
+}
+
+.facebook, .twitter {
+  position: relative;
+  height: 2em;
+  padding: 0.5em 1.5em 0em 0.5em;
+  margin-right: 1em;
+  border-radius: 0.2em;
+  display: grid;
+}
+
+.facebook a, .twitter a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1em;
+  grid-area: 1;
+  line-height: 1em;
+}
+
+.facebook {
+  background-color: #3B5998;
+}
+
+.share img {
+  height: 1.5em;
+  margin-top: -0.3em;
+  grid-area: 1;
+}
+
+.twitter {
+  background-color: #55ACEE;
+}
+
+/* Footer */
+
+footer {
+    border-radius: 0.3em 0.3em 0em;
+    background-color: #e60012;
+    bottom: 0;
+    color: white;
+    position: relative;
+    margin-left: 5.4em;
+}
+
+footer img {
+  width: 6em;
+  margin-right: 2em;
+}
+
+footer section:last-of-type {
+  background-color: #bf0010;
+  color: white;
+}
+
+footer section:last-of-type a {
+  color: white;
+  text-decoration: none;
+}
+
+footer section:last-of-type a:hover {
+  text-decoration: underline;
+}
+
+
+.top {
+  font-weight: 600;
+}
+
+footer section:last-of-type ul {
+  padding: 1.5em 1.5em 0em 1.85em;
+  list-style-type:none;
+}
+
+footer section:last-of-type li {
+  display: inline;
+}
+
+footer section:last-of-type .top li {
+  font-size: 1rem;
+  display: inline;
+  margin-right: 2em;
+}
+
+footer section:last-of-type ul:last-of-type {
+  padding: 0em 1.5em 0em 1.85em;
+  font-size: 1em;
+}
+
+footer section:last-of-type ul:last-of-type a {
+  margin-right: 1.5em;
+}
+
+.land {
+  background-color: #99000d;
+  margin-bottom: -1em;
+  padding-bottom: 1em;
+  display: none;
+}
+
+footer .land ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style-type:none;
+}
+
+footer .land ul li {
+  margin: 0em 0em 1em 0em;
+}
+
+footer .land ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+hr {
+  color: #e60012;
+  width: 95%;
+  margin: auto auto 2em;
+}
+
+h2 {
+  font-weight: normal;
+  padding: 1em 0em 0em 1.7em;  
+}
+
+footer section:first-of-type {
+  margin: 0em 0em -1em 0em;
+  padding: 0.7em 0em 0.5em 2em;
+}
+
+footer section:first-of-type a:last-of-type {
+  position: absolute;
+  right: 1.5em;
+  top: 0em;
+  background: white;
+  text-decoration: none;
+  padding: 0.15em 0.35em 0.15em 0.35em;
+  border-radius: 0em 0em 0.3em 0.3em;
+  box-shadow: .5px 3px 2px -2px #333;
+  color: #e60012;
+  font-size: 1em;
+}
+
+footer p {
+  text-align: end;
+  margin-right: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.knop {
+  background-color: #99000d;
+  position: absolute;
+  padding: 0em 1em 0.3em 1em;
+  border-top-left-radius: 0.2em;
+  border-top-right-radius: 0.2em;
+}
+
+.knop img {
+  width: 1em;
+  margin: auto auto auto 0.5em;
+}
+
+footer section:first-of-type a:last-of-type img {
+  width: 1em;
+  margin: auto;
+}
+
+/* End footer */
+
+/* tweede pagina */
+.supersmashbros {
+  padding: 4.5em 0em 0em 5.4em;
+  width: 69%;
+}
+
+iframe {
+  width: 100%;
+  height: 23.5em;
+  border: none;
+}
+
+.content {
+  padding-left: 5em;
+  padding-right: 5em;
+  background-color: white;
+  margin-top: -0.75em;
+  border-radius: 0.25em;
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+.content p {
+  margin-top: 0.5em;
+  font-weight: 100;
+  color: #333;
+  font-size: 1em;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content h2 {
+  font-weight: 700;
+  padding: 0;
+  font-size: 1.8em;
+  margin-bottom: 0em;
+}
+
+.content a {
+  text-decoration: none;
+  color: #e60012;
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content div img {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0em 0.3em 0.3em 0em;
+}
+
+.content a:nth-of-type(5), .content a:nth-of-type(6), .content a:nth-of-type(8), .content a:nth-of-type(9), .content a:nth-of-type(10) {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.extra {
+  font-size: 0.8em;
+}
+
+.extra {
+  font-weight: 600;
+}
+
+.inlineblock {
+  display: inline-block;
+}
+
+.extra {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  padding: 0 1em 0 1em;
+  border-radius: 0.3em;
+  margin-top: 1em;
+}
+
+.game {
+  background-color: #222;;
+  color: white;
+  margin-top: -2em;
+}
+
+.game h1 {
+  padding: 1em 0em 0em 1em;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0.25em;
+}
+
+.game p {
+  margin: 0em 0em 1em 2.4em;
+  font-size: 0.75em;
+  font-weight: 300;
+  display: inline-block;
+  color: #ccc;
+}
+
+.game ul {
+  background-color: #333;
+  height: 4em;
+  margin: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 0;
+}
+
+.game ul li {
+  display: inline;
+  border-right: 1px solid lightgray;
+  height: 50%;
+  margin: 0;
+  position: relative;
+  padding-top: 0.3em;
+  padding-right: 1em;
+  padding-left: 1em;
+  font-weight: 700;
+}
+
+.game ul:last-of-type {
+  display: none;
+  height: auto;
+  position: absolute;
+}
+
+.game ul:last-of-type li {
+  display: block;
+  border-bottom: 1px solid lightgray;
+  padding: 1em;
+}
+
+.supersmashbros .game .first .dots {
+  cursor: pointer;
+  order: 99;
+  border: none;
+}
+
+.info {
+  margin: -1.5em 0em 2.2em 5.4em;
+}
+
+.koopinfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 29.5%;
+  margin-top: 5em;
+  padding: 1em;
+  background-color: white;
+  margin-right: 0.5em;
+}
+
+.koopinfo img {
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.koopinfo h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+ .koopinfo ul {
+  font-size: 0.8em;
+  padding: 0;
+  padding-left: 1.8em;
+  font-weight: 700;
+}
+
+.koopinfo hr {
+  border: 0;
+  border-top: 0.05em solid #d1d1d1;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.koopinfo p {
+  color: #8c8c8c;
+  font-size: 0.8em;
+}
+
+.koopinfo button:first-of-type {
+  font-weight: 700;
+  font-size: 1.2em;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.5em 0.4em;
+  color: #000;
+  display: block;
+  text-align: center;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #ffbc00;
+}
+
+.koopinfo button:first-of-type:hover {
+  text-decoration: underline;
+  background-color: #ffcf4a;
+}
+
+.koopinfo button:nth-of-type(2){
+  font-weight: 700;
+  font-size: 0.8em;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.5em 0.4em;
+  color: #000;
+  display: block;
+  text-align: center;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #ffe070;
+}
+
+.koopinfo button:nth-of-type(2):hover {
+  text-decoration: underline;
+  background-color: #FFEAA0;
+}
+
+.koopinfo ul:nth-of-type(3) /*Wilde last child gebruiken maar die pakte het niet*/{
+  list-style: none;
+  padding: 0;
+}
+
+.koopinfo ul:nth-of-type(3) li a {
+  text-decoration: none;
+}
+
+.koopinfo ul:nth-of-type(3) li a:hover {
+  text-decoration: underline;
+}
+
+.pijl {
+  border: solid #8c8c8c;
+  border-width: 0 0.1em 0.1em 0;
+  display: inline-block;
+  padding: 0.2em;
+  padding: 0.2em;
+  transform: rotate(-45deg);
+}
+
+.arrow {
+  padding: 0.2em;
+  transform: rotate(0deg);
+}
+
+.koopinfo iframe {
+  display: none;
+}
+
+.koopinfo iframe:last-child {
+  height:14em;
+  border:none;
+  overflow:hidden;
+  display: block;
+}
+
+.koopinfo h2:last-of-type {
+  font-size: 1em;
+  color: #333;
+  font-weight: 700;
+  padding: 0.5em;
+  background-color: white;
+  margin-bottom: 1em;
+  border-left: #f4f4f4 solid 4px;
+}
+
+.left, .right {
+  width: 48%;
+  display: inline-grid;
+  background-color: white;
+  margin: -1.75 em 1em 0em 0em;  
+}
+
+.left h2, .right h2 {
+  font-size: 1.25em;
+  color: #333;
+  font-weight: 700;
+  padding: 0.5em;
+  background-color: white;
+  margin-bottom: 1em;
+  border-left: #f4f4f4 solid 4px;
+  margin-left: 1em;
+}
+
+.left hr, .right hr {
+  width: 100%;
+  border: 0.01em solid lightgray;
+  margin-bottom: 0.5em;
+}
+
+.left p, .left b, .right p, .right b{
+  padding: 0em 0em 0em 1em;
+  margin: 0em;
+}
+
+.left p, .right p {
+  font-size: 0.75em;
+  border-bottom: 0.1em solid lightgray;
+  margin-bottom: 1em;
+  padding: 0em 0em 0.5em 1.4em;
+}
+
+.left p:last-child, .right p:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+
+.secondnav {
+  height: 100vh;
+  z-index: 3;
+  background-color: #e3e3e3;
+  margin-left: -6em;
+  margin-top: 1em;
+}
+
+.secondnav ul {
+  width: auto;
+}
+
+.secondnav ul li {
+  height: 8em;
+  list-style: none;
+  margin: 1em;
+  float: left;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 1em 0 rgba(0,0,0,0.16);
+}
+
+.secondnav ul li a {
+  display: grid;
+}
+
+.secondnav ul li a img {
+  width: 3em;
+
+}
+
+.secondnav ul li:last-of-type {
+  display: none;
+}
+
+/* Media Querie */
+@media (max-width: 60em) {
+.uitgelicht {
+  width: 100%;
+}
+
+.nieuws {
+  position: relative;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-left: 5.5em;
+}
+
+.nieuws h2 {
+  margin-top: 0;
+}
+
+.nieuws ul li a img {
+  margin: 0;
+}
+
+.supersmashbros {
+  padding: 4.2em 0 0 5.4em;
+  width: 100%;
+}
+.koopinfo {
+  position: relative;
+  width: auto;
+  margin-top: 1em;
+  margin-left: 0em;
+  margin-right: 0;
+}
+
+.delen {
+  margin: 1.2em 0em 2.2em 5.4em;
+}
+
+.nieuws {
+  width: auto;
+}
+
+main section:nth-of-type(3) ul a:last-of-type {
+  width: auto;
+  position: relative;
+}
+
+}
+
+@media (max-width: 48em) {
+  main nav {
+    display: none;
+  }
+
+  .uitgelicht {
+    padding: 4.5em 0em 0em 0em;
+    grid-column-gap: 0.2em;
+    grid-row-gap: 0.2em; 
+    grid-template-columns: none;
+    grid-template-rows: none;
+    display: block;
+    margin: 0em;
+  }
+  
+  .nieuws {
+    margin-left: 0;
+  }
+
+  .mario {
+    display: none;
+  }
+
+  .delen {
+    margin-left: 0;
+  }
+
+  footer {
+    margin: 0;
+  }
+
+  .supersmashbros {
+    padding: 4.5em 0 0 0;
+    width: 100%;
+  }
+
+  .koopinfo {
+    position: relative;
+    width: 100%;
+    margin-top: 1em;
+    margin-right: 0;
+  }
+  .info {
+    margin: -1.5em 0em 2.2em 0em;
+  }
+
+  .content div img {
+    width: 100%;
+  }
+}
+
+/*hamburger menu
+https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/
+*/
+nav a label, .secondnav { display: none; }
+@media (max-width: 48em){
+nav a label {display: block;}
+/* .streep {transition: 0.5s; transition-timing-function: linear;} */
+nav a label { 
+  color: white;
+  font-size: 2em;
+  margin-bottom: -1em;
+  justify-content: left;
+  display: grid;
+  margin-left: -0.5em;
+  width: 1em;
+}
+header nav img {
+  margin-left: 2em;
+}
+}
+
+@media (max-width: 30em) {
+  nav div img:last-of-type {
+    padding: 0;
+  }
+  .search {
+    padding: 0;
+  }
+
+  header nav img {
+    width: 5em;
+    margin: 0 0 -0.5em 2em;
+  }
+  
+  header nav div {
+    font-size: 0.7em;
+    text-align: center;
+  }
+  header hr {
+    padding: 0.2em 0em 0.2em 0em;
+  }
+}
+
+.searchpage {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  outline: 0;
+  background: rgba(255,255,255,0.9);
+}
+
+.searchpage form {
+  position: relative;
+  top: 30%;
+  left: 2em;
+  width: 90%;
+}
+
+.searchpage form input {
+  border: 0;
+  border-bottom: 0.05em solid #ccc;
+  border-radius: 0;
+  background: none;
+  min-width: 100%;
+  box-shadow: none;
+  font-weight: 700;
+  font-size: 2.5em;
+  color: #333;
+  padding: 0 0.4em;
+  width: 100%;
+  outline: none;
+  line-height: 1.5em;
+}
+
+.searchbutton {
+  background: url(../images/search.png) no-repeat center transparent;
+  background-color: transparent;
+  background-size: auto;
+  border: none;
+  width: 3em;
+  height: 3em;
+  background-size: 3em;
+  transform: rotate(90deg);
+  position: relative;
+  top: -3.5em;
+  margin-left: 95%;
+  filter: invert(40%) sepia(0%) saturate(6%) hue-rotate(220deg) brightness(102%) contrast(94%);
+}
+
+.searchpage ul {
+  position: relative;
+  top: 13em;
+}
+
+.searchpage ul li:first-of-type {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.searchpage ul li {
+  display: block;
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+.searchpage ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.searchpage ul li a:hover {
+  text-decoration: underline;
+}
+
+.searchpage .x {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 300;
+  background-color: #4b4b4b;
+  color: #fff;
+  border-radius: 100%;
+  display: block;
+  overflow: hidden;
+  width: 1.25em;
+  height: 1.25em;
+  padding: 0;
+  position: fixed;
+  right: 3%;
+  top: 4%;
+  text-decoration: none;
+}

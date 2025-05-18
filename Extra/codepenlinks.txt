@@ -1,0 +1,10 @@
+Opdracht 1 typografie - https://codepen.io/Markiee/pen/GRZOOjd
+
+Opdracht 2 Positioneren - https://codepen.io/Markiee/pen/WNwMOWm
+
+Opdracht 3 Grid - https://codepen.io/Markiee/pen/XWdYqrG
+
+Opdracht 4 Flexbox - https://codepen.io/Markiee/pen/vYGrjNX
+Opdracht 4.2 Flexbox - https://codepen.io/Markiee/pen/yLOEjqW
+
+Opdracht 5 javascript - https://codepen.io/Markiee/pen/wvGXjbY
